@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jurusan', function (Blueprint $table) {
+        Schema::create('jurusans', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_jurusan',20)->unique();
-            $table->string('nama_jurusan',20);
-            $table->string('keterangan',200);
+            $table->string('kode_jurusan', 20)->unique();
+            $table->string('nama_jurusan', 20);
+            $table->string('keterangan', 200);
             $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
-            $table->timestamp('created_at',6)->nullable();
-            $table->timestamp('updated_at',6)->nullable();
+            $table->timestamp('created_at', 6)->nullable();
+            $table->timestamp('updated_at', 6)->nullable();
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jurusan');
+        Schema::dropIfExists('jurusans');
     }
 };
