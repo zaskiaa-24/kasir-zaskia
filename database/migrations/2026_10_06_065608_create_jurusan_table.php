@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('kode_jurusan', 20)->unique();
             $table->string('nama_jurusan', 20);
-            $table->string('keterangan', 200);
+            $table->string('keterangan', 200)->nullable();
             $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
             $table->timestamp('created_at', 6)->nullable();
             $table->timestamp('updated_at', 6)->nullable();
