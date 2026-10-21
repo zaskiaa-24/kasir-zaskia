@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('jenis_tagihan', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('kode_tagihan', 20)->unique();
+            $table->string('nama_tagihan', 100);
+            $table->decimal('nominal', 15, 2);
+            $table->string('periode', 50);
+            $table->text('keterangan')->nullable();
+            $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
+            $table->timestamp('created_at', 6);
+            $table->timestamp('updated_at', 6);
         });
     }
 

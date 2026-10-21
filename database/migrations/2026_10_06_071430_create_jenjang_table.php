@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('jenjang', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nama_jenjang', 20);
+            $table->string('keterangan', 200)->nullable();
+            $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
+            $table->timestamp('created_at', 6)->nullable();
+            $table->timestamp('updated_at', 6)->nullable();
         });
     }
 

@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nis', 20)->unique();
+            $table->string('nama', 100);
+            $table->string('jenis_kelamin', 10);
+            $table->string('alamat', 200)->nullable();
+            $table->string('kelas_id', 20);
+            $table->enum('status', ['aktif', 'tidak_aktif'])->default('aktif');
+            $table->timestamp('created_at', 6)->nullable();
+            $table->timestamp('updated_at', 6)->nullable();
         });
     }
 

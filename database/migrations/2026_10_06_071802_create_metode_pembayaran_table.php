@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('metode_pembayaran', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('kode_metode', 20)->unique();
+            $table->string('nama_metode', 50);
+            $table->string('keterangan', 255)->nullable();
+            $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
+            $table->timestamp('created_at', 6);
+            $table->timestamp('updated_at', 6);
+
         });
     }
 

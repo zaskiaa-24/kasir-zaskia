@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('guru', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nip', 20)->unique();
+            $table->string('nama', 100);
+            $table->string('jenis_kelamin', 10);
+            $table->string('mata_pelajaran', 100);
+            $table->string('no_telephone', 20)->nullable();
+            $table->string('username', 50)->unique();
+            $table->string('password', 255);
+            $table->string('role', 50);
+            $table->enum('status', ['aktif', 'nonaktif'])->default('aktif');
+            $table->timestamp('created_at', 6)->nullable();
+            $table->timestamp('updated_at', 6)->nullable();
         });
     }
 

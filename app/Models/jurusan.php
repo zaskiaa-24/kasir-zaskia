@@ -16,5 +16,5 @@ class Jurusan extends Model
         'keterangan',
         'status',
     ];
-    //
+    
 }
