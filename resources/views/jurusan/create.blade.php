@@ -13,9 +13,9 @@
                 @csrf 
 
                 <div class="form-group">
-                    <label for="nama_siswa">Nama Siswa</label>
-                    <input type="text" name="nama_siswa" class="form-control @error('nama_siswa') is-invalid @enderror" id="nama_siswa" required value="{{ old('nama_siswa') }}">
-                    @error('nama_siswa')
+                    <label for="nama_jurusan">Nama Jurusan</label>
+                    <input type="text" name="nama_jurusan" class="form-control @error('nama_jurusan') is-invalid @enderror" id="nama_jurusan" required value="{{ old('nama_jurusan') }}">
+                    @error('nama_jurusan')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -23,9 +23,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="nis">NIS</label>
-                    <input type="text" name="nis" class="form-control @error('nis') is-invalid @enderror" id="nis" required value="{{ old('nis') }}">
-                    @error('nis')
+                    <label for="kode_jurusan">Kode Jurusan</label>
+                    <input type="text" name="kode_jurusan" class="form-control @error('kode_jurusan') is-invalid @enderror" id="kode_jurusan" required value="{{ old('kode_jurusan') }}">
+                    @error('kode_jurusan')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

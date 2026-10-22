@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('jenjang', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_jenjang', 20);
-            $table->string('keterangan', 200)->nullable();
-            $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
+            $table->string('nama_jenjang');
+            $table->string('keterangan')->nullable();
             $table->timestamp('created_at', 6)->nullable();
             $table->timestamp('updated_at', 6)->nullable();
         });
