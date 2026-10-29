@@ -50,6 +50,7 @@
                         <th style="width: 10px">No</th>
                         <th>Nama Jenjang</th>
                         <th>Keterangan</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,7 +78,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="7" class="text-center">Data tidak ditemukan.</td>
+                        <td colspan="4" class="text-center">Data tidak ditemukan.</td>
                     </tr>
                     @endforelse
                 </tbody>
