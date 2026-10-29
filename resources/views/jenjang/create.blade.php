@@ -21,31 +21,10 @@
                         </span>
                     @enderror
                 </div>
-
                 <div class="form-group">
-                    <label for="kode_jenjang">Kode Jenjang</label>
-                    <input type="text" name="kode_jenjang" class="form-control @error('kode_jenjang') is-invalid @enderror" id="kode_jenjang" required value="{{ old('kode_jenjang') }}">
-                    @error('kode_jenjang')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
-
-                <div class="form-group">
-                    <label for="kelas">Kelas</label>
-                    <input type="text" name="kelas" class="form-control @error('kelas') is-invalid @enderror" id="kelas" required placeholder="Contoh: 12-RPL-A" value="{{ old('kelas') }}">
-                    @error('kelas')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{ old('email') }}">
-                    @error('email')
+                    <label for="keterangan">Keterangan</label>
+                    <input type="text" name="keterangan" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" value="{{ old('keterangan') }}">
+                    @error('keterangan')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -53,7 +32,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="{{ route('siswa.index') }}" class="btn btn-secondary">Batal</a>
+                <a href="{{ route('jenjang.index') }}" class="btn btn-secondary">Batal</a>
             </form>
         </div>
     </div>

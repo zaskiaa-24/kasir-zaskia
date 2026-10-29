@@ -49,10 +49,7 @@
                     <tr>
                         <th style="width: 10px">No</th>
                         <th>Nama Jenjang</th>
-                        <th>Kode Jenjang</th>
                         <th>Keterangan</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,9 +57,7 @@
                     <tr>
                         <td>{{ $jenjangs->firstItem() + $key }}</td>
                         <td>{{ $jenjang->nama_jenjang }}</td>
-                        <td>{{ $jenjang->kode_jenjang }}</td>
                         <td>{{ $jenjang->keterangan }}</td>
-                        <td>{{ $jenjang->status }}</td>
                         <td>
                             {{-- Tombol Aksi disinkronkan stylenya (btn-sm, icon only) --}}
                             <a class="btn btn-info btn-sm" href="{{ route('jenjang.show', $jenjang->id) }}" title="Lihat">
@@ -90,7 +85,7 @@
         </div>
 
         <div class="card-footer clearfix">
-            {!! $jurusans->appends(request()->query())->links('pagination::bootstrap-4') !!}
+            {!! $jenjangs->appends(request()->query())->links('pagination::bootstrap-4') !!}
         </div>
     </div>
 @stop
